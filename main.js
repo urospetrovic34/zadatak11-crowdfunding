@@ -39,11 +39,21 @@ const blackEditionLeftSmall = document.querySelector(
 const mahoganyLeftSmall = document.querySelector(".mahogany-left-small");
 
 const updateValues = () => {
-  localStorage.setItem("bambooLeft",150)
-  localStorage.setItem("blackLeft",150)
-  localStorage.setItem("mahoganyLeft",150)
-  localStorage.setItem("backers",0)
-  localStorage.setItem("ammount",0)
+  if (!localStorage.getItem("bambooLeft")) {
+    localStorage.setItem("bambooLeft", 150);
+  }
+  if (!localStorage.getItem("blackLeft")) {
+    localStorage.setItem("blackLeft", 150);
+  }
+  if (!localStorage.getItem("mahoganyLeft")) {
+    localStorage.setItem("mahoganyLeft", 150);
+  }
+  if (!localStorage.getItem("backers")) {
+    localStorage.setItem("backers", 0);
+  }
+  if (!localStorage.getItem("ammount")) {
+    localStorage.setItem("ammount", 0);
+  }
   if (parseInt(localStorage.getItem("bambooLeft")) === 0) {
     bambooLeft.parentElement.parentElement.parentElement.classList.add(
       "disabled"
