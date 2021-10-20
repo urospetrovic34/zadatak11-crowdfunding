@@ -39,10 +39,11 @@ const blackEditionLeftSmall = document.querySelector(
 const mahoganyLeftSmall = document.querySelector(".mahogany-left-small");
 
 const updateValues = () => {
-  //TEST ZA PRAZAN LAGER
-  //localStorage.setItem("bambooLeft",0)
-  //localStorage.setItem("blackLeft",0)
-  //localStorage.setItem("mahoganyLeft",0)
+  localStorage.setItem("bambooLeft",150)
+  localStorage.setItem("blackLeft",150)
+  localStorage.setItem("mahoganyLeft",150)
+  localStorage.setItem("backers",0)
+  localStorage.setItem("ammount",0)
   if (parseInt(localStorage.getItem("bambooLeft")) === 0) {
     bambooLeft.parentElement.parentElement.parentElement.classList.add(
       "disabled"
